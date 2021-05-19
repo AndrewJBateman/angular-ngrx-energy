@@ -5,7 +5,7 @@
   },
   "generators": {
     "@nrwl/angular:application": {
-      "e2eTestRunner": "none",
+      "e2eTestRunner": "cypress",
       "inlineStyle": true,
       "inlineTemplate": true,
       "linter": "eslint",
@@ -31,6 +31,7 @@
       "style": "scss"
     }
   },
+  "defaultProject": "energy-data-app",
   "projects": {
     "energy-data-app": {
       "projectType": "application",
@@ -156,6 +157,5 @@
         }
       }
     }
-  },
-  "defaultProject": "energy-data-app"
+  }
 }
