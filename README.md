@@ -1,6 +1,6 @@
 # :zap: Angular Ngrx Energy
 
-* Angular PWA to show API data
+* Angular app to show API data on energy use
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-ngrx-energy?style=plastic)
@@ -10,14 +10,14 @@
 
 ## :page_facing_up: Table of contents
 
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
 ## :books: General info
 
