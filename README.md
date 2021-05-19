@@ -1,94 +1,89 @@
+# :zap: Angular-ngrx-energy
 
+- Angular PWA to show API data
+- **Note:** to open web links in a new window use: _ctrl+click on link_
 
-# AngularNgrxEnergy
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-pwa-ssr?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-pwa-ssr?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-pwa-ssr?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-pwa-ssr?style=plastic)
 
-This project was generated using [Nx](https://nx.dev).
+## :page_facing_up: Table of contents
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Status](#status)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
 
-🔎 **Powerful, Extensible Dev Tools**
+## :books: General info
 
-## Adding capabilities to your workspace
+- f
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+## :camera: Screenshots
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+![Frontend screenshot](./img/home.png)
 
-Below are our core plugins:
+## :signal_strength: Technologies
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+- [Nx](https://nx.dev) used to create project workspace
+- [pnpm v6](https://pnpm.io/motivation) to save disk space
+- [Angular framework v12](https://angular.io/)
+- [Angular Universal v12](https://angular.io/guide/universal) Server-Side
+  Rendering(SSR) by a Node Express web server
+- [Angular Express Engine v12](https://www.npmjs.com/package/@nguniversal/express-engine)
+  for running Angular Apps on the server for server side rendering
+- [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse)
+  to check quality of website
+- [Denmark CO2 Emission stats](https://www.energidataservice.dk/collections/co2-emission)
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+## :floppy_disk: Setup
 
-## Generate an application
+- Install dependencies using `npm i`
+- Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+- Run `nx serve angular-ngrx-energy` for a dev server. Frontend will open at
+  `http://localhost:4200/` - refreshes on code changes
+- Run `npm run lint` to lint test entire client-side codebase using TSLint.
+- Run `nx build angular-ngrx-energy` to generate a build file
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+## :wrench: Testing
 
-> You can use any of the plugins above to generate applications as well.
+- Run `ng test` to run Jasmine unit tests via
+  [Karma](https://karma-runner.github.io)
+- Run `ng e2e` to execute the end-to-end tests via
+  [Protractor](http://www.protractortest.org/).
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+## :computer: Code Examples
 
-## Generate a library
+- f
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+```typescript
 
-> You can also use any of the plugins above to generate libraries as well.
+```
 
-Libraries are shareable across libraries and applications. They can be imported from `@angular-ngrx-energy/mylib`.
+## :cool: Features
 
-## Development server
+- f
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+## :clipboard: Status, Testing & To-Do List
 
-## Code scaffolding
+- Status: in work
+- Testing: not tested yet
+- To-Do: add deployment, add content. `Robots.txt` & `sitemap.xml` files will
+  need updating with correct data
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+## :clap: Inspiration/General Tools
 
-## Build
+- Google
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## :file_folder: License
 
-## Running unit tests
+- This project is licensed under the terms of the MIT license.
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+## :envelope: Contact
 
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- Repo created by [ABateman](https://github.com/AndrewJBateman), email:
+  gomezbateman@yahoo.com
