@@ -32,7 +32,7 @@
 * [Nx](https://nx.dev) used to create project workspace
 * [pnpm v6](https://pnpm.io/motivation) to save disk space
 * [Angular framework v12](https://angular.io/)
-* [Github Actions](https://github.com/actions)
+* [Github Actions](https://github.com/actions) - to be ablt to include Continous Integration (CI) and continuous deployment (CD) capabilities and many other features directly in the repository - [explained by Gabriel Tanner](https://gabrieltanner.org/blog/an-introduction-to-github-actions)
 * [Denmark CO2 Emission stats](https://www.energidataservice.dk/collections/co2-emission)
 
 ## :floppy_disk: Setup
@@ -72,7 +72,7 @@
 
 ## :clap: Inspiration/General Tools
 
-* Google
+* [Lars Gyrup Brink Nielsen: Youtube: Angular After Dark](https://www.youtube.com/channel/UCsZWzmsdKz2VA49XXBK5TQA)
 
 ## :file_folder: License
 
