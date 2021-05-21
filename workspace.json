@@ -53,7 +53,9 @@
               "apps/energy-data-app/src/favicon.ico",
               "apps/energy-data-app/src/assets"
             ],
-            "styles": ["apps/energy-data-app/src/styles.scss"],
+            "styles": [
+              "apps/energy-data-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -118,10 +120,39 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/energy-data-app"],
+          "outputs": [
+            "coverage/apps/energy-data-app"
+          ],
           "options": {
             "jestConfig": "apps/energy-data-app/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "co2-data-access": {
+      "projectType": "library",
+      "root": "libs/co2/data-access",
+      "sourceRoot": "libs/co2/data-access/src",
+      "prefix": "nrg",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/co2/data-access"
+          ],
+          "options": {
+            "jestConfig": "libs/co2/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/co2/data-access/src/**/*.ts",
+              "libs/co2/data-access/src/**/*.html"
+            ]
           }
         }
       }
