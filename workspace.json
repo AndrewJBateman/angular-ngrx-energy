@@ -20,6 +20,7 @@
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
+      "prefix": "nrg",
       "unitTestRunner": "jest",
       "strict": true
     },
