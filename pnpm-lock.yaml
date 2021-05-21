@@ -15,6 +15,7 @@ specifiers:
   '@angular/platform-browser': ~12.0.0
   '@angular/platform-browser-dynamic': ~12.0.0
   '@angular/router': ~12.0.0
+  '@ngrx/component-store': ^12.0.0
   '@nrwl/angular': ~12.3.3
   '@nrwl/cli': ~12.3.3
   '@nrwl/eslint-plugin-nx': ~12.3.3
@@ -49,6 +50,7 @@ dependencies:
   '@angular/platform-browser': 12.0.0_d560c8b2e673011d8d48c1b58ea89c8b
   '@angular/platform-browser-dynamic': 12.0.0_e6080ad2ba5a711c6d1ab49fa8a3810c
   '@angular/router': 12.0.0_ec6f1dd00b5eff5e77cd16622d78872d
+  '@ngrx/component-store': 12.0.0_@angular+core@12.0.0+rxjs@6.6.7
   '@nrwl/angular': 12.3.3_ce8ce00fed6345a82fe6a9fbf7a8560c
   rxjs: 6.6.7
   tslib: 2.2.0
@@ -2611,6 +2613,17 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@ngrx/component-store/12.0.0_@angular+core@12.0.0+rxjs@6.6.7:
+    resolution: {integrity: sha512-DZjsarbN6kajWQELfRZFJCV1A+3xuk+Sw1VvMhHIbnd5CBmmrtgfg+dwQgzX5Fe/WnoPwd1/kp+NpfPw60SFSA==}
+    peerDependencies:
+      '@angular/core': ^12.0.0
+      rxjs: ^6.5.3
+    dependencies:
+      '@angular/core': 12.0.0_rxjs@6.6.7+zone.js@0.11.4
+      rxjs: 6.6.7
+      tslib: 2.2.0
+    dev: false
 
   /@ngtools/webpack/12.0.0_cd0a37963016f62fce82055f57d6dd8d:
     resolution: {integrity: sha512-uo3w6/FQesqn8YZrO9QvcXR33f/eJqA5AEZrZqMBXRrCrxyVug1gNvFlx9ZFfKKsmokUfxyWPruei7mQ32DEKQ==}
