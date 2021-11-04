@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'energy-data-app',
-  preset: '../../jest.preset.js',
+  displayName: 'co2-data-access',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  coverageDirectory: '../../coverage/apps/energy-data-app',
+  coverageDirectory: '../../../coverage/libs/co2/data-access',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',

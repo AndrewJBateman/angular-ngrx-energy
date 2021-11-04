@@ -8,7 +8,9 @@
         "plugin:@nrwl/nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "parserOptions": { "project": ["apps/energy-data-app/tsconfig.*?.json"] },
+      "parserOptions": {
+        "project": ["apps/energy-insights-app/tsconfig.*?.json"]
+      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",

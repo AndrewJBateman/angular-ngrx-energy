@@ -18,10 +18,11 @@
       "viewEncapsulation": "None"
     },
     "@nrwl/angular:library": {
-      "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest",
-      "strict": true
+      "prefix": "nrg",
+      "strict": true,
+      "style": "scss",
+      "unitTestRunner": "jest"
     },
     "@schematics/angular:component": {
       "changeDetection": "OnPush",
@@ -31,28 +32,61 @@
       "style": "scss"
     }
   },
-  "defaultProject": "energy-data-app",
+  "defaultProject": "energy-insights-app",
   "projects": {
-    "energy-data-app": {
+    "co2-data-access": {
+      "projectType": "library",
+      "root": "libs/co2/data-access",
+      "sourceRoot": "libs/co2/data-access/src",
+      "prefix": "nrg",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/co2/data-access"],
+          "options": {
+            "jestConfig": "libs/co2/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/co2/data-access/src/**/*.ts",
+              "libs/co2/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "energy-insights-app": {
       "projectType": "application",
-      "root": "apps/energy-data-app",
-      "sourceRoot": "apps/energy-data-app/src",
+      "root": "apps/energy-insights-app",
+      "sourceRoot": "apps/energy-insights-app/src",
       "prefix": "nrg",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/energy-data-app",
-            "index": "apps/energy-data-app/src/index.html",
-            "main": "apps/energy-data-app/src/main.ts",
-            "polyfills": "apps/energy-data-app/src/polyfills.ts",
-            "tsConfig": "apps/energy-data-app/tsconfig.app.json",
+            "outputPath": "dist/apps/energy-insights-app",
+            "index": "apps/energy-insights-app/src/index.html",
+            "main": "apps/energy-insights-app/src/main.ts",
+            "polyfills": "apps/energy-insights-app/src/polyfills.ts",
+            "tsConfig": "apps/energy-insights-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "apps/energy-data-app/src/favicon.ico",
-              "apps/energy-data-app/src/assets"
+              {
+                "glob": "favicon.ico",
+                "input": "libs/root/assets/src",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/root/assets/src/assets",
+                "output": "assets"
+              }
             ],
-            "styles": ["apps/energy-data-app/src/styles.scss"],
+            "styles": ["libs/root/styles/src/index.scss"],
             "scripts": []
           },
           "configurations": {
@@ -71,8 +105,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/energy-data-app/src/environments/environment.ts",
-                  "with": "apps/energy-data-app/src/environments/environment.prod.ts"
+                  "replace": "libs/root/environments/src/lib/environment.ts",
+                  "with": "libs/root/environments/src/lib/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -92,10 +126,10 @@
           "executor": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "energy-data-app:build:production"
+              "browserTarget": "energy-insights-app:build:production"
             },
             "development": {
-              "browserTarget": "energy-data-app:build:development"
+              "browserTarget": "energy-insights-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,24 +137,86 @@
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "energy-data-app:build"
+            "browserTarget": "energy-insights-app:build"
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/energy-data-app/src/**/*.ts",
-              "apps/energy-data-app/src/**/*.html"
+              "apps/energy-insights-app/src/**/*.ts",
+              "apps/energy-insights-app/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/energy-data-app"],
+          "outputs": ["coverage/apps/energy-insights-app"],
           "options": {
-            "jestConfig": "apps/energy-data-app/jest.config.js",
+            "jestConfig": "apps/energy-insights-app/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "root-assets": {
+      "projectType": "library",
+      "root": "libs/root/assets",
+      "sourceRoot": "libs/root/assets/src",
+      "targets": {}
+    },
+    "root-styles": {
+      "projectType": "library",
+      "root": "libs/root/styles",
+      "sourceRoot": "libs/root/styles/src",
+      "targets": {}
+    },
+    "root-environments": {
+      "projectType": "library",
+      "root": "libs/root/environments",
+      "sourceRoot": "libs/root/environments/src",
+      "prefix": "nrg",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/root/environments"],
+          "options": {
+            "jestConfig": "libs/root/environments/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/root/environments/src/**/*.ts",
+              "libs/root/environments/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "co2-util-date-times": {
+      "projectType": "library",
+      "root": "libs/co2/util-date-times",
+      "sourceRoot": "libs/co2/util-date-times/src",
+      "prefix": "nrg",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/co2/util-date-times"],
+          "options": {
+            "jestConfig": "libs/co2/util-date-times/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/co2/util-date-times/src/**/*.ts",
+              "libs/co2/util-date-times/src/**/*.html"
+            ]
           }
         }
       }

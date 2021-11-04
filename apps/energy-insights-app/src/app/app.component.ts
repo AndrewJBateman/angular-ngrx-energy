@@ -4,11 +4,7 @@ import { Component } from '@angular/core';
   selector: 'nrg-root',
   template: `
     <header class="flex">
-      <img
-        alt="Nx logo"
-        width="75"
-        src="https://nx.dev/assets/images/nx-logo-white.svg"
-      />
+      <img alt="Nx logo" width="75" src="/assets/images/nx-logo-white.svg" />
       <h1>Welcome to {{ title }}!</h1>
     </header>
     <main>
@@ -258,5 +254,5 @@ ng affected:e2e
   ],
 })
 export class AppComponent {
-  title = 'energy-data-app';
+  title = 'energy-insights-app';
 }
