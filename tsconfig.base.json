@@ -10,13 +10,17 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["dom", "es2018", "ES2020.String"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-ngrx-energy/co2/data-access": [
-        "libs/co2/data-access/src/index.ts"
+      "@energy-insights/co2/data-access": ["libs/co2/data-access/src/index.ts"],
+      "@energy-insights/co2/util-date-times": [
+        "libs/co2/util-date-times/src/index.ts"
+      ],
+      "@energy-insights/root/environments": [
+        "libs/root/environments/src/index.ts"
       ]
     }
   },

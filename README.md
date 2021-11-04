@@ -1,6 +1,7 @@
 # :zap: Angular Ngrx Energy
 
-* Angular app to show API data on energy use
+* Angular app to show API data on energy in the Danish energy markets.
+* Tutorial code from [Lars Gyrup Brink Nielsen of Angular After Dark](https://www.youtube.com/channel/UCsZWzmsdKz2VA49XXBK5TQA)
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-ngrx-energy?style=plastic)
@@ -32,8 +33,16 @@
 * [Nx](https://nx.dev) used to create project workspace
 * [pnpm v6](https://pnpm.io/motivation) to save disk space
 * [Angular framework v12](https://angular.io/)
-* [Github Actions](https://github.com/actions) - to be ablt to include Continous Integration (CI) and continuous deployment (CD) capabilities and many other features directly in the repository - [explained by Gabriel Tanner](https://gabrieltanner.org/blog/an-introduction-to-github-actions)
+* [ckan](https://ckan.org/) open source data management system for powering data hubs and data portals - [github repo](https://github.com/ckan/ckan)
+* [Node module luxon](https://www.npmjs.com/package/luxon) for dates and times, including [Interval](https://moment.github.io/luxon/docs/class/src/interval.js~Interval.html) time between two [DateTimes](https://moment.github.io/luxon/docs/class/src/datetime.js~DateTime.html)
+* [ngrx Component Store](https://ngrx.io/guide/component-store) stand-alone library that helps to manage local/component state and ensures error state is handled so effect not broken
+* [ngrx tapResponse](https://ngrx.io/api/component-store/tapResponse) handles the response in ComponentStore effects in a safe way
+* [ngrx updater](https://ngrx.io/guide/component-store/write) i mutable state changes
+* [rxjs Timer operator](http://reactivex.io/documentation/operators/timer.html) observable to emit a particular item after a given delay
+* [Github Actions](https://github.com/actions) - to be able to include Continous Integration (CI) and continuous deployment (CD) capabilities and many other features directly in the repository - [explained by Gabriel Tanner](https://gabrieltanner.org/blog/an-introduction-to-github-actions)
 * [Denmark CO2 Emission stats](https://www.energidataservice.dk/collections/co2-emission)
+* [regular expressions](https://regex101.com/) testing online
+* [Polyfill.io](https://polyfill.io/v3/) browser feature polyfills
 
 ## :floppy_disk: Setup
 
@@ -46,10 +55,7 @@
 
 ## :wrench: Testing
 
-* Run `ng test` to run Jasmine unit tests via
-  [Karma](https://karma-runner.github.io)
-* Run `ng e2e` to execute the end-to-end tests via
-  [Protractor](http://www.protractortest.org/).
+* tba
 
 ## :computer: Code Examples
 
@@ -65,18 +71,25 @@
 
 ## :clipboard: Status, Testing & To-Do List
 
-* Status: in work
+* Status: in work. Video 4 1hr23m
 * Testing: not tested yet
-* To-Do: add deployment, add content. `Robots.txt` & `sitemap.xml` files will
-  need updating with correct data
+* To-Do: complete
 
 ## :clap: Inspiration/General Tools
 
-* [Lars Gyrup Brink Nielsen: Youtube: Angular After Dark](https://www.youtube.com/channel/UCsZWzmsdKz2VA49XXBK5TQA)
+* Lars Gyrup Brink Nielsen: Youtube: Angular After Dark:
+* [Nx After Dark: Setting up an Angular 12 workspace](https://www.youtube.com/channel/UCsZWzmsdKz2VA49XXBK5TQA)
+* [Nx After Dark: Creating a data access library with NgRx Component Store](https://www.youtube.com/watch?v=4z6anukUjPk)
+* [Nx After Dark: Implementing and testing data access with NgRx Component Store and Angular HTTP](https://www.youtube.com/watch?v=om3hhlCtgz4)
+* [Nx After Dark: Adding a date-time library and testing an RxJS timer](https://www.youtube.com/watch?v=bKgXFUnHKvU&t=767s)
+* [European Network of Transmission System Operators for Electricity website](https://www.entsoe.eu/)
+* [Node Time](https://nodatime.org/) alternative date and time API for .NET.
+* [Joda Time](https://www.joda.org/joda-time/) replacement for the Java date and time classes.
+* [Fireship: Nx Quickstart - How to Scale a JavaScript Project](https://www.youtube.com/watch?v=VUyBY72mwrQ)
 
 ## :file_folder: License
 
-* This project is licensed under the terms of the MIT license.
+* N/A
 
 ## :envelope: Contact
 

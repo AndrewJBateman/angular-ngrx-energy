@@ -1,4 +1,4 @@
-name: Energy Data CI
+name: Energy Insights CI
 
 env:
   node-version: 14.x
